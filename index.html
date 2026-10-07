@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job & Internship Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Job & Internship Tracker</h1>
+            <p>Track and manage your career applications</p>
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+           <section class="stats">
+
+    <div class="card">
+        <h3>Total Applications</h3>
+        <p id="totalApplications">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Applied</h3>
+        <p id="appliedCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Interview</h3>
+        <p id="interviewCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Selected</h3>
+        <p id="selectedCount">0</p>
+    </div>
+
+</section>
+
+        </section>
+
+
+        <!-- My Applications -->
+        <section class="applications">
+
+            <div class="section-header">
+
+                <h2>My Applications</h2>
+
+                <button onclick="showForm()">
+                    + Add Application
+                </button>
+
+            </div>
+
+
+            <!-- Application Form -->
+            <div id="applicationForm"
+                 class="form-box"
+                 style="display: none;">
+
+                <h3>Add New Application</h3>
+
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Company Name">
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="Job Role">
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location">
+
+                <select id="status">
+
+                    <option value="Applied">
+                        Applied
+                    </option>
+
+                    <option value="Interview">
+                        Interview
+                    </option>
+
+                    <option value="Selected">
+                        Selected
+                    </option>
+
+                    <option value="Rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+                <input
+                    type="date"
+                    id="date">
+
+                <button onclick="saveApplication()">
+                    Save Application
+                </button>
+
+            </div>
+
+
+            <!-- Applications Table -->
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Company</th>
+                        <th>Role</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    
+                        <th>Applied Date</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="applicationsTableBody">
+
+                    <tr>
+                        <td>No applications yet</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+
+        <!-- Available Jobs -->
+        <section class="applications">
+            <div class="section-header">
+
+    <h2>Available Jobs</h2>
+
+</div>
+
+<div class="job-filters">
+
+    <input
+        type="text"
+        id="jobSearch"
+        placeholder="🔍 Search job title or company..."
+        oninput="filterJobs()"
+    >
+
+    <input
+        type="text"
+        id="locationFilter"
+        placeholder="📍 Filter by location..."
+        oninput="filterJobs()"
+    >
+
+    <select id="workTypeFilter" onchange="filterJobs()">
+
+        <option value="">All Work Types</option>
+
+        <option value="Full-time">Full-time</option>
+
+        <option value="Part-time">Part-time</option>
+
+        <option value="Internship">Internship</option>
+
+        <option value="Contract">Contract</option>
+
+    </select>
+
+</div>
+
+
+            <!-- Jobs Table -->
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Company</th>
+                        <th>Job Role</th>
+                        <th>Location</th>
+                        <th>Work Type</th>
+                        <th>Mode</th>
+                        <th>Job Link</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="jobsTableBody">
+
+                    <tr>
+                        <td colspan="6">
+                            Loading jobs...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

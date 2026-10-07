@@ -1,0 +1,16 @@
+[
+    {
+        "company": "tcs",
+        "role": "pthon developer",
+        "location": "chandigarh",
+        "status": "Applied",
+        "date": "2026-09-13"
+    },
+    {
+        "company": "google",
+        "role": "software developer",
+        "location": "",
+        "status": "Applied",
+        "date": ""
+    }
+]
