@@ -22,29 +22,36 @@ A simple web-based application to track job and internship applications in one p
 
 ## 📂 Project Structure
 
-```text
 job-internship-tracker/
 │
+├── postings.csv
 ├── main.py
 ├── index.html
 ├── style.css
 ├── script.js
-├── applications.json
-└── README.md
-▶️ How to Run
-1. Clone the Repository
+└── applications.json
+## ▶️ How to Run
+
+### 1. Clone the Repository
 git clone https://github.com/jasmine-21-10/job-internship-tracker.git
+
 2. Open the Project Folder
 cd job-internship-tracker
-3. Make Sure Python is Installed
 
-Check Python using:
+3. Install Required Libraries
+pip install flask flask-cors pandas
 
-python --version
-4. Run the Application
+4. Add the Job Dataset
+
+The application requires postings.csv to load job data.
+
+5. Run the Application
 python main.py
-5. Open the Application
+6. Open the Application
 
+Open the following URL in your web browser:
+
+http://127.0.0.1:5000
 After running main.py, open the URL shown in the terminal in your web browser.
 
 📌 Purpose
